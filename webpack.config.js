@@ -1,8 +1,8 @@
 // webpack.config.js
 var path = require('path');
-var libraryName = 'mavenGeography';
+var libraryName = 'mavenGeo';
 var plugins = [];
-var outputFile = libraryName + '.js';
+var outputFile = 'mavenGeography.js';
 
 var config = {
   entry: __dirname + '/src/index.js',
