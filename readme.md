@@ -1,9 +1,8 @@
 <p style="margin-bottom: 0in"><b>In Node.js</b></p>
 <p style="margin-bottom: 0in">var mavenGeo =
 require('dialectica_geography');</p>
-<p style="margin-bottom: 0in"><br/>
+<br/>
 
-</p>
 <p style="margin-bottom: 0in"><b>In html</b></p>
 <p style="margin-bottom: 0in">&lt;script src=&quot;./your
 path/mavenGeography.js&quot;&gt;&lt;/script&gt;</p>
