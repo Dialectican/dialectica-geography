@@ -14,7 +14,7 @@ path/mavenGeography.js&quot;&gt;&lt;/script&gt;</p>
 <p style="margin-bottom: 0in"><b>List of Tools for countries and
   Continents</b></p>
 <hr></hr>
-<p style="margin-bottom: 0in"><b>Find tools:</b></p>
+<p style="margin-bottom: 0in;color: blue"><b>Find tools:</b></p>
 <p style="margin-bottom: 0in"><b>Get list of countries names
 (Afghanistan, Albania, etc...)</b></p>
 <p style="margin-bottom: 0in">mavenGeo.getListOfNamesCountries()</p>
