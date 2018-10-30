@@ -10,7 +10,7 @@ path/mavenGeography.js&quot;&gt;&lt;/script&gt;</p>
 <p style="margin-bottom: 0in">import mavenGeo from
 &quot;dialectica_geography&quot;;</p>
 
-
+<hr></hr>
 <p style="margin-bottom: 0in"><b>List of Tools for countries and
 Continents</b></p>
 
@@ -60,7 +60,7 @@ country”)</p>
 </b></p>
 <p style="margin-bottom: 0in">mavenGeo.getGeonameID(“name of
 country”)</p>
-
+<hr></hr>
 <p style="margin-bottom: 0in"><b>Check tools:</b></p>
 <p style="margin-bottom: 0in"><b>Check if country belongs to Continent</b></p>
 <p style="margin-bottom: 0in">mavenGeo.isContinent(“name of
