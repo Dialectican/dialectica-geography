@@ -12,7 +12,7 @@ path/mavenGeography.js&quot;&gt;&lt;/script&gt;</p>
 &quot;dialectica_geography&quot;;</p>
 
 <hr></hr>
-<p style="margin-bottom: 0in"><b style="text-decoration: underline">List of Tools for countries and
+<p style="margin-bottom: 0in"><b>List of Tools for countries and
   Continents</b></p>
 
 <p style="margin-bottom: 0in"><b>Find tools:</b></p>
