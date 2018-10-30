@@ -10,12 +10,10 @@ path/mavenGeography.js&quot;&gt;&lt;/script&gt;</p>
 <p style="margin-bottom: 0in"><b>In ES6</b></p>
 <p style="margin-bottom: 0in">import mavenGeo from
 &quot;dialectica_geography&quot;;</p>
-
 <hr></hr>
-<p style="margin-bottom: 0in"><b>List of Tools for countries and
+<p align="center" style="margin-bottom: 0in"><b>List of Tools for countries and
   Continents</b></p>
-
-<p style="margin-bottom: 0in"><b>Find tools:</b></p>
+<p style="margin-bottom: 0in;color: blue"><b>Find tools:</b></p>
 <p style="margin-bottom: 0in"><b>Get list of countries names
 (Afghanistan, Albania, etc...)</b></p>
 <p style="margin-bottom: 0in">mavenGeo.getListOfNamesCountries()</p>
