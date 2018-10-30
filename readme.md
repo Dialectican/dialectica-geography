@@ -6,9 +6,7 @@ require('dialectica_geography');</p>
 <p style="margin-bottom: 0in"><b>In html</b></p>
 <p style="margin-bottom: 0in">&lt;script src=&quot;./your
 path/mavenGeography.js&quot;&gt;&lt;/script&gt;</p>
-<p style="margin-bottom: 0in"><br/>
 
-</p>
 <p style="margin-bottom: 0in"><b>In ES6</b></p>
 <p style="margin-bottom: 0in">import mavenGeo from
 &quot;dialectica_geography&quot;;</p>
