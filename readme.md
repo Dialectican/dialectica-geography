@@ -55,10 +55,6 @@ country”)</p>
 <p style="margin-bottom: 0px">mavenGeo.getCurrencyName(“name of
 country”)</p>
 
-<p style="margin-bottom: 0px"><b>Get Currency name of Country
-</b></p>
-<p style="margin-bottom: 0px">mavenGeo.getGeonameID(“name of
-country”)</p>
 <hr></hr>
 <p style="margin-bottom: 0px"><b>Check tools:</b></p>
 <p style="margin-bottom: 0px"><b>Check if country belongs to Continent</b></p>
