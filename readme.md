@@ -40,9 +40,7 @@ country”)</p>
 <p style="margin-bottom: 0in"><b>Get Dial code of Country
 </b></p>
 <p style="margin-bottom: 0in">mavenGeo.getDial(“name of country”)</p>
-<p style="margin-bottom: 0in"><br/>
 
-</p>
 <p style="margin-bottom: 0in"><b>Get Currency code of Country
 </b></p>
 <p style="margin-bottom: 0in">mavenGeo.getCurrencyCode(“name of
