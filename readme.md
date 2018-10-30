@@ -30,6 +30,10 @@ etc..)</b></p>
 <p style="margin-bottom: 0in">mavenGeo.getNameShort(“name of
 country”)</p>
 
+<p style="margin-bottom: 0in"><b>Get Capital Name of Country</b></p>
+<p style="margin-bottom: 0in">mavenGeo.getCapital(“name of
+country”)</p>
+
 <p style="margin-bottom: 0in"><b>Get Continent of Country
 </b></p>
 <p style="margin-bottom: 0in">mavenGeo.getContinent(“name of
