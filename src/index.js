@@ -5,7 +5,7 @@ const Data = getObjectCountries();
 class Country {
   constructor(country) {
     this.countryName = country.CountryName;
-    this.countryShortForm = country.Country_Name_two;
+    this.countryShortForm = country.Country_Name_Short;
     this.capital = country.Capital;
     this.continent = country.Continent;
     this.geonameID = country.GeonameID;
@@ -19,7 +19,7 @@ class Country {
     this.benelux = country.Benelux;
   }
 
-  getCountryShortForml() {
+  getCountryShortForm() {
     return this.countryShortForm;
   }
 
@@ -133,7 +133,8 @@ export function getNameShort(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
     let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
-    return newCountry.getCountryShortForml();
+    console.log(newCountry)
+    return newCountry.getCountryShortForm();
   } else {
     return "country name is no valid";
   }
