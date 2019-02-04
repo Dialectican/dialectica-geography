@@ -119,9 +119,9 @@ export function getListOfContinents() {
   return arrayOfContinets;
 }
 
-export function getCapital(name) {
+export function getCapital(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     return newCountry.getCountryCapital();
   } else {
@@ -129,9 +129,9 @@ export function getCapital(name) {
   }
 }
 
-export function getNameShort(name) {
+export function getNameShort(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     return newCountry.getCountryShortForml();
   } else {
@@ -139,9 +139,9 @@ export function getNameShort(name) {
   }
 }
 
-export function getContinent(name) {
+export function getContinent(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     return newCountry.getCountryContinent();
   } else {
@@ -149,9 +149,9 @@ export function getContinent(name) {
   }
 }
 
-export function getDial(name) {
+export function getDial(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     return newCountry.getCountryDial();
   } else {
@@ -159,9 +159,9 @@ export function getDial(name) {
   }
 }
 
-export function getCurrencyCode(name) {
+export function getCurrencyCode(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     return newCountry.getCountryCurrencyCode();
   } else {
@@ -169,9 +169,9 @@ export function getCurrencyCode(name) {
   }
 }
 
-export function getCurrencyName(name) {
+export function getCurrencyName(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     return newCountry.getCountryCurrencyName();
   } else {
@@ -181,7 +181,7 @@ export function getCurrencyName(name) {
 
 export function getGeonameID(name) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     return newCountry.getCountryGeonameID();
   } else {
@@ -204,9 +204,9 @@ export function isContinent(countryName, continentName) {
   }
 }
 
-export function isApac(name) {
+export function isApac(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     let check = newCountry.isCountryApac();
     if ( check === 'Yes' ) {
@@ -219,9 +219,9 @@ export function isApac(name) {
   }
 }
 
-export function isNordigs(name) {
+export function isNordigs(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     let check = newCountry.isCountryNordigs();
     if ( check === 'Yes' ) {
@@ -234,9 +234,9 @@ export function isNordigs(name) {
   }
 }
 
-export function isDach(name) {
+export function isDach(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     let check = newCountry.isCountryDach();
     if ( check === 'Yes' ) {
@@ -249,9 +249,9 @@ export function isDach(name) {
   }
 }
 
-export function isBenelux(name) {
+export function isBenelux(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
-    let countryObject = Data[name.toLowerCase()]
+    let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     let check = newCountry.isCountryBenelux();
     if ( check === 'Yes' ) {
