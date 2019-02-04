@@ -133,7 +133,6 @@ export function getNameShort(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
     let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
-    console.log(newCountry)
     return newCountry.getCountryShortForm();
   } else {
     return "country name is no valid";
