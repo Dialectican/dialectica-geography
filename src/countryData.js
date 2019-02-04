@@ -232,8 +232,8 @@ Turks & Caicos Islands,TC,1-649,USD,US Dollar,Territory of GB,Cockburn Town,Nort
 Tuvalu,TV,688,AUD,Australian Dollar,Yes,Funafuti,Australia,2110297,Yes,No,No,No
 U.S. Outlying Islands,UM,,,,Territories of US,,Australia,5854968,No,No,No,No
 U.S. Virgin Islands,VI,1-340,USD,US Dollar,Territory of US,Charlotte Amalie,North America,4796775,No,No,No,No
-UK,GB,44,GBP,Pound Sterling,Yes,London,Europe,2635167,No,No,No,No
-US,US,1,USD,US Dollar,Yes,Washington,North America,6252001,No,No,No,No
+United Kingdom,GB,44,GBP,Pound Sterling,Yes,London,Europe,2635167,No,No,No,No
+United States Of America,US,1,USD,US Dollar,Yes,Washington,North America,6252001,No,No,No,No
 Uganda,UG,256,UGX,Uganda Shilling,Yes,Kampala,Africa,226074,No,No,No,No
 Ukraine,UA,380,UAH,Hryvnia,Yes,Kiev,Europe,690791,No,No,No,No
 United Arab Emirates,AE,971,AED,UAE Dirham,Yes,Abu Dhabi,Middle EAsiat,290557,No,No,No,No
