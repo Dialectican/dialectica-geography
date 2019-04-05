@@ -1,6 +1,6 @@
 {
   "name": "dialectica_geography",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Geography tools get list of countries, get country continent, dial etc..",
   "homepage": "https://github.com/Dialectican/dialectica-geography",
   "main": "dist/mavenGeography.js",

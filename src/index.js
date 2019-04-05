@@ -93,6 +93,7 @@ function getObjectCountries() {
 }
 
 function checkValidityOfCountryName(name) {
+  name = name.toLowerCase();
   let countries = getListOfNamesCountries();
   if ( countries.includes(name) ) {
     return true;
