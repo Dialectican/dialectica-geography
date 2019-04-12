@@ -1,6 +1,7 @@
 import {StringData} from "./countryData.js";
 
 const Data = getObjectCountries();
+let value;
 
 class Country {
   constructor(country) {
@@ -190,6 +191,21 @@ export function getGeonameID(name) {
   }
 }
 
+//shortName either capital or lowercase
+export function getCountryFromShortName(shortName) {
+  let countryName = null;
+  for ( let key in Data ) {
+    if ( Data[key].Country_Name_Short.toLowerCase() == shortName.toLowerCase() ) {
+      countryName = Data[key].CountryName;
+    }
+  }
+  if ( countryName == null ) {
+    return 'No country match for the given short name';
+  } else {
+    return countryName;
+  }
+}
+
 export function isContinent(countryName, continentName) {
   if ( checkValidityOfCountryName(countryName) ) {
     let countryObject = Data[countryName.toLowerCase()]
@@ -263,4 +279,109 @@ export function isBenelux(countryName) {
   } else {
     return "country name is no valid";
   }
+}
+
+function deepSeekObject(model, seekKey, seekValue) {
+  let counter = 1;
+  for ( let key in model ) {
+    if ( key === seekKey ) {
+      let testValue = model[key];
+      if ( typeof seekValue == 'undefined' ) {
+        value = model[key];
+      } else {
+        if ( testValue === seekValue ) {
+          //global variable value
+          value = model['value'];
+        }
+      }
+    }
+    let type = typeof model[key];
+    if ( typeof model[key] == 'object' && model[key] !== null ) {
+      deepSeekObject(model[key], seekKey, seekValue);
+      counter++;
+    }
+  }
+}
+
+function fetchApi(path) {
+  let promise = new Promise(function(resolve,reject) {
+    fetch(path, {
+          method: "GET",
+          mode: "cors",
+          headers: {
+              "Accept": "application/json",
+          }
+      })
+     .then(res => res.text())
+     .then(data => {
+       resolve(data);
+     })
+  })
+  return promise;
+}
+
+export function getGeolocationJsonFromIp(globalObject,ip) {
+  let isWindow = globalObject === 'window' ? true : false;
+  let isNode = globalObject === 'node' ? true : false;
+  let isLocal = globalObject === 'local' ? true : false;
+  let path;
+  if ( isWindow ) {
+    path = `https://rest-test.db.ripe.net/geolocation.json?source=test&ipkey=${ip}`;
+    let promise = fetchApi(path);
+    return promise;
+  } else if ( isLocal ) {
+    path = `https://cors.io?https://rest-test.db.ripe.net/geolocation.json?source=test&ipkey=${ip}`;
+    let promise = fetchApi(path);
+    return promise;
+  } else {
+    console.log('is node');
+    return 'undefined'
+  }
+}
+
+export function fetchGeolocationFromJson(data) {
+  data = JSON.parse(data);
+  deepSeekObject(data, 'value');
+  let location = value;
+  return location;
+}
+
+export function getCountryJsonFromIp(globalObject,ip) {
+  let isWindow = globalObject === 'window' ? true : false;
+  let isNode = globalObject === 'node' ? true : false;
+  let isLocal = globalObject === 'local' ? true : false;
+  let path;
+  if ( isWindow ) {
+    path = `https://apps.db.ripe.net/db-web-ui/api/whois/search?` +
+            `abuse-contact=true&` +
+            `flags=B&` +
+            `ignore404=true&` +
+            `limit=20&` +
+            `managed-attributes=true&` +
+            `offset=0&` +
+            `query-string=${ip}&` +
+            `resource-holder=true`;
+    return fetchApi(path);
+  } else if ( isLocal ) {
+    path = `https://cors.io?https://apps.db.ripe.net/db-web-ui/api/whois/search?` +
+            `abuse-contact=true&` +
+            `flags=B&` +
+            `ignore404=true&` +
+            `limit=20&` +
+            `managed-attributes=true&` +
+            `offset=0&` +
+            `query-string=${ip}&` +
+            `resource-holder=true`;
+    return fetchApi(path);
+  } else {
+    console.log('is node');
+    return 'undefined'
+  }
+}
+
+export function fetchCountryFromJson(data) {
+  data = JSON.parse(data);
+  deepSeekObject(data, 'name', 'country');
+  let country = value;
+  return country;
 }
