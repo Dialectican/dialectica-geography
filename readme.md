@@ -66,15 +66,24 @@ country")</p>
 <p style="margin-bottom: 0px">mavenGeo.getGeolocationJsonFromIp("globalObject", ip)
 <br>
 globalObject values are: "window", "node", "local".
+<br>
 When testing from localHost we choose globalObject local to avoid
 Cors errors => response header Origin: null
-Above function returns a promise
+<br>
+Above function returns a promise.
+<br>
 Example:
+<br>
   let data = await mavenGeo.getGeolocationJsonFromIp("local", "10.0.0.0");
+  <br>
   We can use also .then(function(res) {})
+  <br>
   Then we use the function fetchGeolocationFromJson(data) to get location
+  <br>
   let test = mavenGeo.fetchGeolocationFromJson(data);
+  <br>
   console.log(test);
+  <br>
   The result is for example "52.37559917665907 4.888916015625"
 </p>
 
@@ -82,16 +91,25 @@ Example:
 <p style="margin-bottom: 0px">mavenGeo.getCountryJsonFromIp("globalObject", ip)
 <br>
 globalObject values are: "window", "node", "local".
+<br>
 When testing from localHost we choose globalObject local to avoid
 Cors errors => response header Origin: null
-Above function returns a promise
+<br>
+Above function returns a promise.
+<br>
 Example:
+<br>
   let data = await mavenGeo.getCountryJsonFromIp("local", "10.0.0.0");
+  <br>
   We can use also .then(function(res) {})
+  <br>
   Then we use the function fetchCountryFromJson(data) to get short name
+  <br>
   let test = mavenGeo.fetchCountryFromJson(data);
+  <br>
   console.log(test);
-  The result is for example "GR"
+  <br>
+  The result is for example "GR".
 </p>
 
 <hr></hr>
