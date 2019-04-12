@@ -114,15 +114,15 @@ America, etc...)</b>
   <br>
   &ensp;Example:
   <br>
-  ```javascript
-    let data = await mavenGeo.getCountryJsonFromIp("local", "10.0.0.0");
-    //We can use also .then(function(res) {})
-    //Then we use the function fetchCountryFromJson(data) to get short name
-    let test = mavenGeo.fetchCountryFromJson(data);
-    console.log(test);
-    //The result is for example "GR".
-  ```
 </p>
+```javascript
+  let data = await mavenGeo.getCountryJsonFromIp("local", "10.0.0.0");
+  //We can use also .then(function(res) {})
+  //Then we use the function fetchCountryFromJson(data) to get short name
+  let test = mavenGeo.fetchCountryFromJson(data);
+  console.log(test);
+  //The result is for example "GR".
+```
 
 <hr></hr>
 <p style="margin-bottom: 0px"><b>Check tools:</b></p>
