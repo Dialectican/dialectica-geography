@@ -90,14 +90,17 @@ America, etc...)</b>
   <br>
   &ensp;Example:
   <br>
-  ```javascript
-    let data = await mavenGeo.getGeolocationJsonFromIp("local", "10.0.0.0");
-    //We can use also .then(function(res) {})
-    //Then we use the function fetchGeolocationFromJson(data) to get location
-    let test = mavenGeo.fetchGeolocationFromJson(data);
-    console.log(test);
-    //The result is for example "52.37559917665907 4.888916015625"
-  ```  
+    &ensp;&ensp;let data = await mavenGeo.getGeolocationJsonFromIp("local", "10.0.0.0");
+    <br>
+    &ensp;&ensp;//We can use also .then(function(res) {})
+    <br>
+    &ensp;&ensp;//Then we use the function fetchGeolocationFromJson(data) to get location
+    <br>
+    &ensp;&ensp;let test = mavenGeo.fetchGeolocationFromJson(data);
+    <br>
+    &ensp;&ensp;console.log(test);
+    <br>
+    &ensp;&ensp;//The result is for example "52.37559917665907 4.888916015625"
 </p>
 
 <p style="margin-bottom: 0px"><b>Get country short name  from ip</b>
@@ -114,15 +117,18 @@ America, etc...)</b>
   <br>
   &ensp;Example:
   <br>
+    &ensp;&ensp;let data = await mavenGeo.getCountryJsonFromIp("local", "10.0.0.0");
+    <br>
+    &ensp;&ensp;//We can use also .then(function(res) {})
+    <br>
+    &ensp;&ensp;//Then we use the function fetchCountryFromJson(data) to get short name
+    <br>
+    &ensp;&ensp;let test = mavenGeo.fetchCountryFromJson(data);
+    <br>
+    &ensp;&ensp;console.log(test);
+    <br>
+    &ensp;&ensp;//The result is for example "GR".
 </p>
-```javascript
-  let data = await mavenGeo.getCountryJsonFromIp("local", "10.0.0.0");
-  //We can use also .then(function(res) {})
-  //Then we use the function fetchCountryFromJson(data) to get short name
-  let test = mavenGeo.fetchCountryFromJson(data);
-  console.log(test);
-  //The result is for example "GR".
-```
 
 <hr></hr>
 <p style="margin-bottom: 0px"><b>Check tools:</b></p>
