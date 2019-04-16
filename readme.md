@@ -25,7 +25,11 @@ mavenGeography.js is in dist folder minified version
 ```sh
  mavenGeo.getListOfNamesCountries();
 ```  
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 435ca72bbbb1f50fb333417a3ab0f04683938615
 #### Get list of Continents (Europe, North, America, etc...)
 ```sh
  mavenGeo.getListOfContinents();
@@ -93,6 +97,7 @@ Above function returns a promise.
 ```  
 ##### Example node:
 ```js
+<<<<<<< HEAD
   //First we require https node js library and then passing to function
   const https = require('https');
   let data = await mavenGeo.getGeolocationJsonFromIp("node", "10.0.0.0", https);
@@ -100,6 +105,15 @@ Above function returns a promise.
   //Then we use the function fetchGeolocationFromJson(data) to get location
   let test = mavenGeo.fetchGeolocationFromJson(data);
   console.log(test);
+=======
+  //First we require https node js library and then passing to function 
+  const https = require('https'); 
+  let data = await mavenGeo.getGeolocationJsonFromIp("local", "10.0.0.0", https); 
+  //We can use also .then(function(res) {}) 
+  //Then we use the function fetchGeolocationFromJson(data) to get location 
+  let test = mavenGeo.fetchGeolocationFromJson(data); 
+  console.log(test); 
+>>>>>>> 435ca72bbbb1f50fb333417a3ab0f04683938615
   //The result is for example "52.37559917665907 4.888916015625"
 ```  
 
@@ -108,10 +122,17 @@ Above function returns a promise.
  mavenGeo.getCountryJsonFromIp("globalObject", ip);
 ```  
 globalObject values are: "window", "node", "local".
+<<<<<<< HEAD
 
 When testing from localHost we choose globalObject local to avoid
 Cors errors => response header Origin: null
 
+=======
+ 
+When testing from localHost we choose globalObject local to avoid
+Cors errors => response header Origin: null
+ 
+>>>>>>> 435ca72bbbb1f50fb333417a3ab0f04683938615
 Above function returns a promise.
 ##### Example:
 ```js
@@ -122,6 +143,7 @@ Above function returns a promise.
   console.log(test);
   //The result is for example "GR".
 ```  
+<<<<<<< HEAD
 ##### Example node:
 ```js
   //First we require https node js library and then passing to function
@@ -131,6 +153,17 @@ Above function returns a promise.
   //Then we use the function fetchCountryFromJson(data) to get location
   let test = mavenGeo.fetchCountryFromJson(data);
   console.log(test);
+=======
+##### Example node: 
+```js
+  //First we require https node js library and then passing to function 
+  const https = require('https'); 
+  let data = await mavenGeo.getCountryJsonFromIp("local", "10.0.0.0", https); 
+  //We can use also .then(function(res) {}) 
+  //Then we use the function fetchCountryFromJson(data) to get location 
+  let test = mavenGeo.fetchCountryFromJson(data); 
+  console.log(test); 
+>>>>>>> 435ca72bbbb1f50fb333417a3ab0f04683938615
   ////The result is for example "GR".
 ```  
 
