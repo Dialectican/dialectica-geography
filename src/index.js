@@ -320,7 +320,7 @@ function fetchApi(path) {
   return promise;
 }
 
-export function getGeolocationJsonFromIp(globalObject,ip) {
+export function getGeolocationJsonFromIp(globalObject, ip, https) {
   let isWindow = globalObject === 'window' ? true : false;
   let isNode = globalObject === 'node' ? true : false;
   let isLocal = globalObject === 'local' ? true : false;
@@ -334,8 +334,36 @@ export function getGeolocationJsonFromIp(globalObject,ip) {
     let promise = fetchApi(path);
     return promise;
   } else {
-    console.log('is node');
-    return 'undefined'
+    console.log('is node!');
+    let options = {
+    hostname: 'rest-test.db.ripe.net',
+    path: `/geolocation.json?source=test&ipkey=${ip}`,
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json'
+      }
+    };
+    let promise = new Promise(function(resolve,reject) {
+      let getRequest = https.request(options, function(res) {
+          let statusCode = res.statusCode;
+          //console.log(`STATUS: ${statusCode}`);
+          //if status from response is not 200 disconnect socket
+          let body = '';
+          res.on('data', function(data) {
+                body += data;
+          });
+          res.on('end', function() {
+                resolve(body)
+          });
+        });
+        //If there is a connection error on this request prompt the error message
+        getRequest.on('error', function(e) {
+          console.error(`problem with request: ${e.message}`);
+          reject(e);
+        });
+        getRequest.end();
+    });
+    return promise;
   }
 }
 
@@ -346,7 +374,7 @@ export function fetchGeolocationFromJson(data) {
   return location;
 }
 
-export function getCountryJsonFromIp(globalObject,ip) {
+export function getCountryJsonFromIp(globalObject, ip, https) {
   let isWindow = globalObject === 'window' ? true : false;
   let isNode = globalObject === 'node' ? true : false;
   let isLocal = globalObject === 'local' ? true : false;
@@ -374,8 +402,44 @@ export function getCountryJsonFromIp(globalObject,ip) {
             `resource-holder=true`;
     return fetchApi(path);
   } else {
-    console.log('is node');
-    return 'undefined'
+    console.log('is node!');
+    let options = {
+    hostname: 'apps.db.ripe.net',
+    path: `/db-web-ui/api/whois/search?` +
+            `abuse-contact=true&` +
+            `flags=B&` +
+            `ignore404=true&` +
+            `limit=20&` +
+            `managed-attributes=true&` +
+            `offset=0&` +
+            `query-string=${ip}&` +
+            `resource-holder=true`,
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json'
+      }
+    };
+    let promise = new Promise(function(resolve,reject) {
+      let getRequest = https.request(options, function(res) {
+          let statusCode = res.statusCode;
+          //console.log(`STATUS: ${statusCode}`);
+          //if status from response is not 200 disconnect socket
+          let body = '';
+          res.on('data', function(data) {
+                body += data;
+          });
+          res.on('end', function() {
+                resolve(body)
+          });
+        });
+        //If there is a connection error on this request prompt the error message
+        getRequest.on('error', function(e) {
+          console.error(`problem with request: ${e.message}`);
+          reject(e);
+        });
+        getRequest.end();
+    })
+    return promise;
   }
 }
 
