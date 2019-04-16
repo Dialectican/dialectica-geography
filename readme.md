@@ -4,16 +4,17 @@
 ```
 
 ## Usage example
-In Node
+#### In Node
 ```sh
 var mavenGeo = require('dialectica_geography');
 ```
-In Html.
-  mavenGeography.js is in dist folder minified version
+#### In Html
+
+mavenGeography.js is in dist folder minified version
 ```sh
  <script src="./your path/mavenGeography.js"></script>
 ```  
-In ES6
+#### In ES6
 ```sh
  import mavenGeo from "dialectica_geography";
 ```  
