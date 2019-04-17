@@ -78,8 +78,17 @@ For example Greece is the country name for short name 'GR'.
 ```  
 globalObject values are: "window", "node", "local".
 
-When testing from localHost we choose globalObject local to avoid
-Cors errors => response header Origin: null
+When testing from localHost and library is loaded as a script for example
+
+```sh
+ <script src="./dist/mavenGeography.js"></script>
+```  
+
+or from browser address bar like this
+
+file://path..../index.html => (script is inside index.html)
+
+we choose globalObject local to avoid Cors errors => response header Origin: null
 
 Above function returns a promise.
 ##### Example:
@@ -109,8 +118,17 @@ Above function returns a promise.
 ```  
 globalObject values are: "window", "node", "local".
 
-When testing from localHost we choose globalObject local to avoid
-Cors errors => response header Origin: null
+When testing from localHost and library is loaded as a script for example
+
+```sh
+ <script src="./dist/mavenGeography.js"></script>
+```  
+
+or from browser address bar like this
+
+file://..../index.html   => (script is inside index.html)
+
+we choose globalObject local to avoid Cors errors => response header Origin: null
 
 Above function returns a promise.
 ##### Example:

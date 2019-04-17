@@ -181,7 +181,7 @@ export function getCurrencyName(countryName) {
   }
 }
 
-export function getGeonameID(name) {
+export function getGeonameID(countryName) {
   if ( checkValidityOfCountryName(countryName) ) {
     let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
