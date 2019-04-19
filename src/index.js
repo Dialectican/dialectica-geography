@@ -1,4 +1,5 @@
 import {StringData} from "./countryData.js";
+import {Flags} from "./flags.js";
 
 const Data = getObjectCountries();
 let value;
@@ -448,4 +449,13 @@ export function fetchCountryFromJson(data) {
   deepSeekObject(data, 'name', 'country');
   let country = value;
   return country;
+}
+
+export function showCountryFlag(elem, shortName) {
+  shortName = shortName.toLowerCase();
+  if ( typeof Flags[shortName] != 'undefined' ) {
+    elem.src = Flags[shortName];
+  } else {
+    console.log('flag dont exist');
+  }
 }

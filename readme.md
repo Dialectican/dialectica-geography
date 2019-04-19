@@ -72,6 +72,23 @@ For example Greece is the country name for short name 'GR'.
  mavenGeo.getCountryFromShortName("short name of country");
 ```  
 
+#### Show country flag
+Works only on browser environment not in node.js.
+```sh
+ mavenGeo.showCountryFlag('element to show', 'short name of country');
+```  
+##### Example:
+```js
+  //Suppose in html we have the element
+  <img id='imgId'/>
+
+  let element = document.getElementById('imgId');
+  //or jquery
+  let element = $('#imgId');
+  //Country to show flag Greece. Short name of Greece is 'gr'
+  mavenGeo.showCountryFlag(element, 'gr');
+```  
+
 #### Get geolocation from ip
 ```sh
  mavenGeo.getGeolocationJsonFromIp("globalObject", ip);
