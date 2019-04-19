@@ -61,6 +61,11 @@ mavenGeography.js is in dist folder minified version
  mavenGeo.getCurrencyName("name of country");
 ```  
 
+#### Get Total area of Country
+```sh
+ mavenGeo.getTotalArea("name of country");
+```  
+
 #### Get Geoname ID  of Country
 ```sh
  mavenGeo.getGeonameID("name of country");

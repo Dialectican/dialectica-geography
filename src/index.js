@@ -19,6 +19,7 @@ class Country {
     this.nordigs = country.Nordigs;
     this.dach = country.Dach;
     this.benelux = country.Benelux;
+    this.totalArea = country.TotalArea;
   }
 
   getCountryShortForm() {
@@ -47,6 +48,10 @@ class Country {
 
   getCountryGeonameID() {
     return this.geonameID;
+  }
+
+  getCountryTotalArea() {
+    return this.totalArea;
   }
 
   isCountryIndependent() {
@@ -90,6 +95,7 @@ function getObjectCountries() {
     data[countryNameLowerCase]['Nordigs'] = arrayOfCountriesContent[10];
     data[countryNameLowerCase]['Dach'] = arrayOfCountriesContent[11];
     data[countryNameLowerCase]['Benelux'] = arrayOfCountriesContent[12];
+    data[countryNameLowerCase]['TotalArea'] = arrayOfCountriesContent[13];
   }
   return data;
 }
@@ -187,6 +193,16 @@ export function getGeonameID(countryName) {
     let countryObject = Data[countryName.toLowerCase()]
     let newCountry = new Country(countryObject);
     return newCountry.getCountryGeonameID();
+  } else {
+    return "country name is no valid";
+  }
+}
+
+export function getTotalArea(countryName) {
+  if ( checkValidityOfCountryName(countryName) ) {
+    let countryObject = Data[countryName.toLowerCase()]
+    let newCountry = new Country(countryObject);
+    return newCountry.getCountryTotalArea();
   } else {
     return "country name is no valid";
   }
